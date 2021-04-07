@@ -2,86 +2,25 @@
 {% block content %}
     <h2 style="text-align: center">{{ search | title }}</h2>
     <div class="row">
-
-        <div class="col s4">
-            <div class="card">
-                <div class="card-image">
-                    <a href="/"><img src="https://kb.rspca.org.au/wp-content/uploads/2018/11/golder-retriever-puppy.jpeg" alt=""></a>
-                </div>
-                <div class="card-content">
-                    <p>Test</p>
-                </div>
-                <div class="card-action">
-                    <a href="/">View listing: Price Test Price</a>
-                </div>
-            </div>
-        </div>
-        <div class="col s4">
-            <div class="card">
-                <div class="card-image">
-                    <a href="/"><img src="https://kb.rspca.org.au/wp-content/uploads/2018/11/golder-retriever-puppy.jpeg" alt=""></a>
-                </div>
-                <div class="card-content">
-                    <p>Test</p>
-                </div>
-                <div class="card-action">
-                    <a href="/">View listing: Price Test Price</a>
+        {% for post in final_posting_list %}
+            {#        <p>{{ post.0 }}</p>#}
+            {#        <a href="{{ post.1 }}">{{ post.1 }}</a>#}
+            {#        <p>{{ post.2 }}</p>#}
+            <div class="col s4">
+                <div class="card">
+                    <div class="card-image">
+                        <a href="/"><img
+                                src="{{ post.3 }}"
+                                alt=""></a>
+                    </div>
+                    <div class="card-content">
+                        <a href="{{ post.1 }}">{{ post.0 }}</a>
+                    </div>
+                    <div class="card-action">
+                        <a href="{{ post.1 }}">Price: {{ post.2 }}</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col s4">
-            <div class="card">
-                <div class="card-image">
-                    <a href="/"><img src="https://kb.rspca.org.au/wp-content/uploads/2018/11/golder-retriever-puppy.jpeg" alt=""></a>
-                </div>
-                <div class="card-content">
-                    <p>Test</p>
-                </div>
-                <div class="card-action">
-                    <a href="/">View listing: Price Test Price</a>
-                </div>
-            </div>
-        </div>
-    </div> <div class="row">
-
-        <div class="col s4">
-            <div class="card">
-                <div class="card-image">
-                    <a href="/"><img src="https://kb.rspca.org.au/wp-content/uploads/2018/11/golder-retriever-puppy.jpeg" alt=""></a>
-                </div>
-                <div class="card-content">
-                    <p>Test</p>
-                </div>
-                <div class="card-action">
-                    <a href="/">View listing: Price Test Price</a>
-                </div>
-            </div>
-        </div>
-        <div class="col s4">
-            <div class="card">
-                <div class="card-image">
-                    <a href="/"><img src="https://kb.rspca.org.au/wp-content/uploads/2018/11/golder-retriever-puppy.jpeg" alt=""></a>
-                </div>
-                <div class="card-content">
-                    <p>Test</p>
-                </div>
-                <div class="card-action">
-                    <a href="/">View listing: Price Test Price</a>
-                </div>
-            </div>
-        </div>
-        <div class="col s4">
-            <div class="card">
-                <div class="card-image">
-                    <a href="/"><img src="https://kb.rspca.org.au/wp-content/uploads/2018/11/golder-retriever-puppy.jpeg" alt=""></a>
-                </div>
-                <div class="card-content">
-                    <p>Test</p>
-                </div>
-                <div class="card-action">
-                    <a href="/">View listing: Price Test Price</a>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 {% endblock content %}

@@ -12,6 +12,6 @@ This is test line
 - Get the class icon from materialize: https://materializecss.com/icons.html
 - This format: search | title to Upper first letter of search string
 - Install bs4 BeautifulSoup in views: pip install bs4 
-  to use this libs
+  to use this libs parsing text into HTML (BeautifulSoup(data, 'html.parser'))
 - import requests inside views: 
 - Create requirement.txt file: pip freeze > requirements.txt
