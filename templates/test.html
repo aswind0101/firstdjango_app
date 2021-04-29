@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module 4 Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style type="text/css">
+        body {
+            background-color: #2b2b2b; /*this is for body background color*/
+        }
+
+        p {
+            cursor: pointer;
+            color: white; /* to increase paragraph tag <p> text size and to change font color*/
+            font-size: 35px;
+        }
+
+        input[type=text] {
+            outline: none;
+            border: 2px solid #b2b3af; /* just applied some styles to input field*/
+            border-radius: 5px;
+            padding: 5px;
+            width: 275px;
+        }
+    </style>
+</head>
+<body onload="return showOnPageLoad();">
+<!-- here the function showOnPageLoad() will execute when the page is loaded -->
+<div class="container">
+    <h1 style="color: white">Module 4 Project</h1>
+    <p style="color: yellow" id="p" onmousedown="return changeColor('red');" onmouseup="return changeColor('green');">Click the text to change
+        the color.</p>
+    <!-- here id attribute is 'p' and the same function called for both onmousedown and onmouseup events with argument 'color'-->
+
+    <input style="color: white" type="text" name="a" id="a" onchange="return changeToUpperCase();" placeholder="Enter your name">
+
+    <!-- here id is 'a' and onchange event called the function changeToUpperCase(); -->
+
+</div>
+</body>
+
+<script type="text/javascript">
+    function showOnPageLoad() {
+        alert("Page is Loaded");    //This dialog box alert will display whenever we load the page because we used onload=showOnPageLoad()
+    }
+
+    function changeColor(color)   //when onmousedown or onmouseup events take place on <p> tag then this function which contains color argument invokes
+    {
+        document.getElementById('p').style.color = color;     //here the color of the <p> tag depend on the mouse events onmouseup and onmousedown
+    }
+
+    function changeToUpperCase()    //whenever the text changes in the text field then this function invokes as we taken onchange=changeToUpperCase()
+    {
+        var text = document.getElementById('a');
+        text.value = text.value.toUpperCase();
+    }
+</script>
+
+</html>
