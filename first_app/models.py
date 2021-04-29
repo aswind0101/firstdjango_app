@@ -7,7 +7,7 @@ class Search(models.Model):
     created = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return '{}'.format(self.search)
+        return '{} - {}'.format(self.search, self.created.time())
 
     class Meta:
         verbose_name_plural = 'Searches'
